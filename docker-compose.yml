@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  back:
+    image: gridmybusiness-backend
+    container_name: gridmybusiness-back
+    working_dir: /usr/src/app/
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: uvicorn main:app --reload --host 0.0.0.0
+    volumes:
+      - .:/usr/src/app/
+    ports:
+      - 8000:8000
+    environment:
+      - GOOGLE_KEY=${GOOGLE_KEY}

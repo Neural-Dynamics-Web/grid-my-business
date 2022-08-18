@@ -1,0 +1,4 @@
+1. Install Python "https://www.python.org/downloads/release/python-3912/"
+2. In the current directory create "env" folder "https://docs.python.org/3/tutorial/venv.html" (12.2)
+3. Open terminal in the current directory and type: "pip install -r requirements.txt"
+4. Write in the terminal: "python main.py" to load data to logs/
