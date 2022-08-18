@@ -33,7 +33,7 @@ def find_nearest_businesses(longitude: float,
                      first_point=base_point)
         results = sorted(results, key=sort)
 
-    return results
+    return results[:20]
 
 
 def distance(second_point: typing.Dict,
