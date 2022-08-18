@@ -6,22 +6,22 @@ import os
 # endregion
 
 
-def find_nearest_businesses(longtitude: float,
+def find_nearest_businesses(longitude: float,
                             latitude: float,
                             query: str)\
     -> typing.List[typing.Dict]:
     url = "https://maps.googleapis.com/maps/api/place/textsearch/json"\
-        + "?location={latitude}, {longtitude}"\
+        + "?location={latitude}, {longitude}"\
         + "&query={query}"\
         + "&key={key}"
     
     google_api_key = os.environ.get("GOOGLE_KEY")
-    url = url.format(longtitude=longtitude,
+    url = url.format(longitude=longitude,
                      key=google_api_key,
                      latitude=latitude,
                      query=query)
     
-    base_point = {"location": {"lng": longtitude,
+    base_point = {"location": {"lng": longitude,
                                "lat": latitude}}
 
     results = requests.get(url=url)\

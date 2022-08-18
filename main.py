@@ -17,11 +17,11 @@ app = fastapi.FastAPI(
 
 
 @app.get(path="/nearest_businessses")
-async def nearest_businessses(longtitude: float,
+async def nearest_businessses(longitude: float,
                               latitude: float,
                               query: str)\
     -> typing.List[typing.Dict]:
     return services.google.maps\
-        .find_nearest_businesses(longtitude=longtitude,
+        .find_nearest_businesses(longitude=longitude,
                                  latitude=latitude,
                                  query=query)
