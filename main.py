@@ -16,8 +16,8 @@ app = fastapi.FastAPI(
 )
 
 
-@app.get(path="/nearest_businessses")
-async def nearest_businessses(longitude: float,
+@app.get(path="/nearest_businesses")
+async def nearest_businesses(longitude: float,
                               latitude: float,
                               query: str)\
     -> typing.List[typing.Dict]:
