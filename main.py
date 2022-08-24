@@ -10,9 +10,11 @@ load_dotenv()
 
 
 app = fastapi.FastAPI(
+    contact={"email": "neuraldynamics.web@gmail.com"},
     swagger_ui_parameters={
         "displayRequestDuration": True
-    }
+    },
+    title="Grid API"
 )
 
 
